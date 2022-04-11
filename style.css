@@ -1,0 +1,166 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    /* ===== Colors ===== */
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+/*general css*/
+.tools li {
+    list-style: none;
+    margin-top: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+}
+.tools .nav-text {
+    color: var(--text-color);
+    margin-left: 18px;
+    white-space: nowrap;
+
+}
+.tools li .icon {
+    font-size: 18px;
+}
+
+.tools li:hover {
+    border-radius: 6px;
+    background-color: var(--toggle-color);
+}
+
+/**/
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: var(--sidebar-color);
+    position: fixed;
+    top:0;
+    left: 0;
+    padding: 10px 14px;
+}
+.sidebar header {
+    position: relative;
+}
+.sidebar header .image-text {
+    display: flex;
+    align-items: center;
+}
+.sidebar .image {
+    min-width: 60px;
+}
+.sidebar .image-text img {
+    width: 40px;
+}
+.sidebar .text {
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar .text .profession {
+    font-weight: 200;
+}
+.sidebar header .toggle {
+    position: absolute;
+    top: 50;
+    right: -24px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--sidebar-color);
+}
+.tools .menu ul li.active {
+    background-color: var(--primary-color);
+    border-radius: 6px;
+}
+.tools .menu ul li.active .icon,
+.tools .menu ul li.active .nav-text {
+    color: var(--sidebar-color);
+}
+
+.tools .menu ul li.search {
+    background-color: var(--toggle-color);
+    border-radius: 6px;
+    padding: 8px;
+}
+.tools .menu ul li.search input {
+    background-color: var(--toggle-color);;
+    border: none;
+    margin-left: 10px;
+}
+.tools .menu ul li.search input:focus{
+    outline: none;
+}
+.moods {
+    background-color: var(--primary-color-light);
+    display: flex;
+}
+.moods .moon-sun {
+    height: 50px;
+    width: 18px;
+    display: flex;
+    align-items: center;
+}
+.moods .moon-sun i {
+    position: absolute;
+}
+.moods .moon-sun i.sun {
+    opacity: 0;
+}
+.moods .toggle-switch {
+    height: 100%;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.moods .toggle-switch .switch {
+    height: 22px;
+    width: 44px;
+    background-color: var(--toggle-color);
+    position: relative;
+    border-radius: 30px;
+}
+.moods .toggle-switch .switch::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--sidebar-color);
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+}
